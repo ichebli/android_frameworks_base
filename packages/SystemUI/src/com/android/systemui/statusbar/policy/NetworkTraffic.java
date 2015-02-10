@@ -186,7 +186,7 @@ public class NetworkTraffic extends TextView {
         txtSizeMulti = resources.getDimensionPixelSize(R.dimen.net_traffic_multi_text_size);
         Handler mHandler = new Handler();
         SettingsObserver settingsObserver = new SettingsObserver(mHandler);
-        settingsObserver.observe();
+        //settingsObserver.observe();
         updateSettings();
     }
 
@@ -230,7 +230,7 @@ public class NetworkTraffic extends TextView {
 
     private void updateSettings() {
         ContentResolver resolver = mContext.getContentResolver();
-        mState = Settings.System.getInt(resolver, Settings.System.NETWORK_TRAFFIC_STATE, 0);
+        //mState = Settings.System.getInt(resolver, Settings.System.NETWORK_TRAFFIC_STATE, 0);
         if (isSet(mState, MASK_UNIT)) {
             KB = KILOBYTE;
         } else {
